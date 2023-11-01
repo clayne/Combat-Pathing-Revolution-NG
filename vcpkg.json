@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+    "name": "hello-world",
+    "version-string": "0.0.1",
+    "dependencies": [
+        "commonlibsse-ng",
+        "effolkronium-random",
+        "rsm-binary-io",
+        "simpleini",
+        "spdlog",
+        "nlohmann-json",
+        "rapidcsv",
+        "tomlplusplus",
+        "xbyak",
+        "ryml"
+    ]
+}

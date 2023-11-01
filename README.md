@@ -1,93 +1,107 @@
-# Combat-Pathing-Revolution-NG
-SKSE plugin that introduced modern action game combat pathing AI into skyrim.
+> 📜 other templates available at https://github.com/SkyrimScripting/SKSE_Templates
 
-- [SSE](https://www.nexusmods.com/skyrimspecialedition/mods/86950)
-- [VR](https://www.nexusmods.com/skyrimspecialedition/mods/87895)
-- [NG]()
+# SKSE "Hello, world!"
 
-## Requirements
+Very simple C++ SKSE plugin for Skyrim!
 
-- [Git](https://git-scm.com/)
-  - Download latest version from [Here](https://git-scm.com/downloads)
-- [CMake](https://cmake.org/)
-  - Download latest version from [Here](https://cmake.org/download/) and add to your `path` during installation
-- [PowerShell](https://github.com/PowerShell/PowerShell/releases/latest)
-- [Vcpkg](https://github.com/microsoft/vcpkg)
-  - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
-- [Visual Studio Community 2022](https://visualstudio.microsoft.com/)
-  - Desktop development with C++
-- [CommonLibNG](https://github.com/max-su-2019/CommonLibSSE/tree/NG)
-  - see Building Through Cmake (cmake-gui) section below
-- [DKUtil](https://github.com/gottyduke/DKUtil)
-  - see Building Through Cmake (cmake-gui) section below
+---
 
-## User Requirements
+- [SKSE "Hello, world!"](#skse-hello-world)
+- [What does it do?](#what-does-it-do)
+- [CommonLibSSE NG](#commonlibsse-ng)
+- [Requirements](#requirements)
+  - [Opening the project](#opening-the-project)
+- [Project setup](#project-setup)
+  - [Finding Your "`mods`" Folder](#finding-your-mods-folder)
+- [Setup your own repository](#setup-your-own-repository)
+- [Sharing is Caring](#sharing-is-caring)
 
-- [Address Library for SKSE](https://www.nexusmods.com/skyrimspecialedition/mods/32444)
-  - Needed for SSE/AE
-- [VR Address Library for SKSEVR](https://www.nexusmods.com/skyrimspecialedition/mods/58101)
-  - Needed for VR
+# What does it do?
 
-## Building 
-At the location of your choice, open terminal (or) cmd (or)Powershell and enter
-```
-git clone https://github.com/max-su-2019/CombatPathingRevolution
-```
-```
-cd CombatPathingRevolution
-```
-```
-git submodule add https://github.com/gottyduke/DKUtil.git extern/DKUtil
-```
-```
-git submodule update -f --init
-```
-## Using Cmake (cmake-gui)
-Now open Cmake (cmake-gui) application.
-- In `where is the source code : ` , open the project directory (or) in this case the `CombatPathingRevolution` directory
-- In `Where to build the binaries : ` , open the project directory and create a new folder called `build` directory. Select the `build` directory
-- Select either `Debug` or `Release` in the `Preset : ` tab
-- Click `Configure` and select either `Ninja` or `Ninja Multi-Config` as Generator
-- Click `Finish` and wait for the following Error
-```
-CMake Error at CMakeLists.txt:6 (project):
-  The CMAKE_CXX_COMPILER:
+After running Skyrim, once at the Main Menu, press the `~` key to open the game console.
 
-    cl.exe
+You will see that we printed `"Hello, world!"` to the console at the Main Menu 🐉
 
-  is not a full path and was not found in the PATH.
+# CommonLibSSE NG
 
-  Tell CMake where to find the compiler by setting either the environment
-  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
-  to the compiler, or to the compiler name if it is in the PATH.
-```
-- Now go to `File` menu option and click `Delete Cache`
-- Then Click `Configure` and select the latest Visual Studio Generator
-- Click `Finish`
-- After configuration is done and you get the message `Configuring done`, don't forget to click `Generate`n
-- optionally, to open the project, click `Open Project`
+Because this uses [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG), it supports Skyrim SE, AE, GOG, and VR.
 
-## NG
+[CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG) is a fork of the popular [powerof3 fork](https://github.com/powerof3/CommonLibSSE) of the _original_ `CommonLibSSE` library created by [Ryan McKenzie](https://github.com/Ryan-rsm-McKenzie) in [2018](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE/commit/224773c424bdb8e36c761810cdff0fcfefda5f4a).
 
-```
-cmake --preset Release
-cmake --build build --config Release
-```
+# Requirements
 
-## License
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) (_the free Community edition_)
+- [`vcpkg`](https://github.com/microsoft/vcpkg)
+  - 1. Clone the repository using git OR [download it as a .zip](https://github.com/microsoft/vcpkg/archive/refs/heads/master.zip)
+  - 2. Go into the `vcpkg` folder and double-click on `bootstrap-vcpkg.bat`
+  - 3. Edit your system or user Environment Variables and add a new one:
+    - Name: `VCPKG_ROOT`  
+      Value: `C:\path\to\wherever\your\vcpkg\folder\is`
 
-[MIT](LICENSE)
+<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/VCPKG_ROOT.png" height="150">
 
-## Credits
+## Opening the project
 
-- [Maxsu](https://www.nexusmods.com/skyrimspecialedition/users/47103898)([GitHub](https://github.com/max-su-2019)) for original mod
-- Fenix for original RE work and source codes from his combat AI.
-- Dropkicker for helped writing the assembly hook codes.
-- [Dtry](https://www.nexusmods.com/skyrimspecialedition/users/77140323)([GitHub](https://github.com/D7ry)) for sharing the source codes from payload interpreter.
-- Duffb, chaos for helped me test the plugin during early development.
-- [alandtse](https://github.com/alandtse) VR port
-- [Skyrim Scripting](https://github.com/SkyrimScriptinghttps://github.com/SkyrimScripting)for the Youtube Tutorials and the SKSE Templates
+Once you have Visual Studio 2022 installed, you can open this folder in basically any C++ editor, e.g. [VS Code](https://code.visualstudio.com/) or [CLion](https://www.jetbrains.com/clion/) or [Visual Studio](https://visualstudio.microsoft.com/)
+- > _for VS Code, if you are not automatically prompted to install the [C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions, please install those and then close VS Code and then open this project as a folder in VS Code_
 
-# Animation Developers
+You may need to click `OK` on a few windows, but the project should automatically run CMake!
 
-[**Developer Guidelines**](https://github.com/max-su-2019/CombatPathingRevolution/blob/master/doc/en/Developers%20Guidelines%20of%20CPR.md)
+It will _automatically_ download [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSSE-NG) and everything you need to get started making your new plugin!
+
+# Project setup
+
+By default, when this project compiles it will output a `.dll` for your SKSE plugin into the `build/` folder.
+
+If you want to configure this project to output your plugin files
+into your Skyrim Special Edition's "`Data`" folder:
+
+- Set the `SKYRIM_FOLDER` environment variable to the path of your Skyrim installation  
+  e.g. `C:\Program Files (x86)\Steam\steamapps\common\Skyrim Special Edition`
+
+<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/SKYRIM_FOLDER.png" height="150">
+
+If you want to configure this project to output your plugin files
+into your "`mods`" folder:  
+(_for Mod Organizer 2 or Vortex_)
+
+- Set the `SKYRIM_MODS_FOLDER` environment variable to the path of your mods folder:  
+  e.g. `C:\Users\<user>\AppData\Local\ModOrganizer\Skyrim Special Edition\mods`  
+  e.g. `C:\Users\<user>\AppData\Roaming\Vortex\skyrimse\mods`
+
+<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/SKYRIM_MODS_FOLDER.png" height="150">
+
+## Finding Your "`mods`" Folder
+
+In Mod Organizer 2:
+
+> Click the `...` next to "Mods" to get the full folder path
+
+<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/MO2/MO2SettingsModsFolder.png" height="150">
+
+In Vortex:
+
+<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Vortex/VortexSettingsModsFolder.png" height="150">
+
+# Setup your own repository
+
+If you clone this template on GitHub, please:
+
+- Go into `LICENSE` and change the year and change `<YOUR NAME HERE>` to your name.
+- Go into `CODE_OF_CONDUCT.md` and change `<YOUR CONTACT INFO HERE>` to your contact information.
+
+The `LICENSE` defaults to using the [MIT License](https://choosealicense.com/licenses/mit/), a permissive license which is used by many popular Skyrim mods (_including [CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE)_).
+
+The `CODE_OF_CONDUCT.md` defaults to using the [Contributor Covenant](https://www.contributor-covenant.org/), the most popular code of conduct for open source communities.
+
+If you'd like to know more about open source licenses, see:
+- [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+- [Choose an open source license](https://choosealicense.com/)
+
+# Sharing is Caring
+
+**If you use this template, PLEASE release your project as a public open source project.** 💖
+
+**Please do not release your SKSE plugin on Nexus/etc without making the source code available** \*
+
+> \* _You do you. But please help our community by sharing your source `<3`_
