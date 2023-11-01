@@ -3,7 +3,7 @@ SKSE plugin that introduced modern action game combat pathing AI into skyrim.
 
 - [SSE](https://www.nexusmods.com/skyrimspecialedition/mods/86950)
 - [VR](https://www.nexusmods.com/skyrimspecialedition/mods/87895)
-- [NG]()
+- [NG](https://www.nexusmods.com/skyrimspecialedition/mods/103833)
 
 ## Requirements
 
