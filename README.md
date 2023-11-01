@@ -1,4 +1,4 @@
-# Combat-Pathing-Revolution-NG
+# Combat Pathing Revolution - NG
 SKSE plugin that introduced modern action game combat pathing AI into skyrim.
 
 - [SSE](https://www.nexusmods.com/skyrimspecialedition/mods/86950)
@@ -31,7 +31,7 @@ SKSE plugin that introduced modern action game combat pathing AI into skyrim.
 ## Building 
 At the location of your choice, open terminal (or) cmd (or)Powershell and enter
 ```
-git clone https://github.com/max-su-2019/CombatPathingRevolution
+git clone https://github.com/JudahJL/Combat-Pathing-Revolution-NG.git
 ```
 ```
 cd CombatPathingRevolution
@@ -44,7 +44,7 @@ git submodule update -f --init
 ```
 ## Using Cmake (cmake-gui)
 Now open Cmake (cmake-gui) application.
-- In `where is the source code : ` , open the project directory (or) in this case the `CombatPathingRevolution` directory
+- In `where is the source code : ` , open the project directory (or) in this case the `Combat-Pathing-Revolution-NG` directory
 - In `Where to build the binaries : ` , open the project directory and create a new folder called `build` directory. Select the `build` directory
 - Select either `Debug` or `Release` in the `Preset : ` tab
 - Click `Configure` and select either `Ninja` or `Ninja Multi-Config` as Generator
