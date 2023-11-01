@@ -17,9 +17,9 @@ SKSE plugin that introduced modern action game combat pathing AI into skyrim.
 - [Visual Studio Community 2022](https://visualstudio.microsoft.com/)
   - Desktop development with C++
 - [CommonLibNG](https://github.com/max-su-2019/CommonLibSSE/tree/NG)
-  - see Building Through Cmake (cmake-gui) section below
+  - see `Building` and `Building Through Cmake (cmake-gui)` section below
 - [DKUtil](https://github.com/gottyduke/DKUtil)
-  - see Building Through Cmake (cmake-gui) section below
+  - see `Building` and `Building Through Cmake (cmake-gui)` section below
 
 ## User Requirements
 
